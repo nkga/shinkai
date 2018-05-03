@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinkaiModel", "ShinkaiModel\ShinkaiModel.csproj", "{B16F4DE7-21AD-4FEF-955B-0A5A365FA4E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{69AEE16A-B6E7-4642-8081-3928B32455DF} = {69AEE16A-B6E7-4642-8081-3928B32455DF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinkaiClient", "ShinkaiClient\ShinkaiClient.csproj", "{BE983E25-24CC-4FC8-9017-61EEC43DD618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harmony", "Harmony\Harmony.csproj", "{69AEE16A-B6E7-4642-8081-3928B32455DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteNetLib", "LiteNetLib\LiteNetLib.csproj", "{B0A014E4-0392-4E35-AA42-8FB5A40417E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{69AEE16A-B6E7-4642-8081-3928B32455DF} = {69AEE16A-B6E7-4642-8081-3928B32455DF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinkaiServer", "ShinkaiServer\ShinkaiServer.csproj", "{0FC864B0-694E-4FCA-B78C-8EF98BC6F262}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE983E25-24CC-4FC8-9017-61EEC43DD618} = {BE983E25-24CC-4FC8-9017-61EEC43DD618}
+		{69AEE16A-B6E7-4642-8081-3928B32455DF} = {69AEE16A-B6E7-4642-8081-3928B32455DF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B16F4DE7-21AD-4FEF-955B-0A5A365FA4E3}.Debug|x64.ActiveCfg = Debug|x64
+		{B16F4DE7-21AD-4FEF-955B-0A5A365FA4E3}.Debug|x64.Build.0 = Debug|x64
+		{B16F4DE7-21AD-4FEF-955B-0A5A365FA4E3}.Release|x64.ActiveCfg = Release|x64
+		{B16F4DE7-21AD-4FEF-955B-0A5A365FA4E3}.Release|x64.Build.0 = Release|x64
+		{BE983E25-24CC-4FC8-9017-61EEC43DD618}.Debug|x64.ActiveCfg = Debug|x64
+		{BE983E25-24CC-4FC8-9017-61EEC43DD618}.Debug|x64.Build.0 = Debug|x64
+		{BE983E25-24CC-4FC8-9017-61EEC43DD618}.Release|x64.ActiveCfg = Release|x64
+		{BE983E25-24CC-4FC8-9017-61EEC43DD618}.Release|x64.Build.0 = Release|x64
+		{69AEE16A-B6E7-4642-8081-3928B32455DF}.Debug|x64.ActiveCfg = Debug|x64
+		{69AEE16A-B6E7-4642-8081-3928B32455DF}.Debug|x64.Build.0 = Debug|x64
+		{69AEE16A-B6E7-4642-8081-3928B32455DF}.Release|x64.ActiveCfg = Release|x64
+		{69AEE16A-B6E7-4642-8081-3928B32455DF}.Release|x64.Build.0 = Release|x64
+		{B0A014E4-0392-4E35-AA42-8FB5A40417E0}.Debug|x64.ActiveCfg = Debug|x64
+		{B0A014E4-0392-4E35-AA42-8FB5A40417E0}.Debug|x64.Build.0 = Debug|x64
+		{B0A014E4-0392-4E35-AA42-8FB5A40417E0}.Release|x64.ActiveCfg = Release|x64
+		{B0A014E4-0392-4E35-AA42-8FB5A40417E0}.Release|x64.Build.0 = Release|x64
+		{0FC864B0-694E-4FCA-B78C-8EF98BC6F262}.Debug|x64.ActiveCfg = Debug|x64
+		{0FC864B0-694E-4FCA-B78C-8EF98BC6F262}.Debug|x64.Build.0 = Debug|x64
+		{0FC864B0-694E-4FCA-B78C-8EF98BC6F262}.Release|x64.ActiveCfg = Release|x64
+		{0FC864B0-694E-4FCA-B78C-8EF98BC6F262}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B5BA33E-57AF-4427-A2EC-D6945CD24836}
+	EndGlobalSection
+EndGlobal

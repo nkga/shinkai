@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{BE983E25-24CC-4FC8-9017-61EEC43DD618}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShinkaiClient</RootNamespace>
+    <AssemblyName>ShinkaiClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>bin\Release\</OutputPath>
+    <LangVersion>default</LangVersion>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\SharedConfig.targets" />
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SubnauticaManaged)\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SubnauticaManaged)\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="iTween, Version=1.0.5467.41988, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SubnauticaManaged)\iTween.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SubnauticaManaged)\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SubnauticaManaged)\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logic\Logic.cs" />
+    <Compile Include="Mono\PlayerChat.cs" />
+    <Compile Include="Mono\Power.cs" />
+    <Compile Include="Mono\RemoteInventory.cs" />
+    <Compile Include="Mono\RemotePlayerAnimator.cs" />
+    <Compile Include="Mono\SyncedCreature.cs" />
+    <Compile Include="Mono\SyncedObject.cs" />
+    <Compile Include="Mono\SyncedVehicle.cs" />
+    <Compile Include="Mono\SyncedCyclops.cs" />
+    <Compile Include="Mono\SyncedExosuit.cs" />
+    <Compile Include="Mono\SyncedSeamoth.cs" />
+    <Compile Include="Unity\AnimatorExtensions.cs" />
+    <Compile Include="Unity\Attacher.cs" />
+    <Compile Include="Unity\BuildChange.cs" />
+    <Compile Include="Unity\GuidManager.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Mono\MenuMods.cs" />
+    <Compile Include="Mono\MenuPanel.cs" />
+    <Compile Include="Mono\Multiplayer.cs" />
+    <Compile Include="Mono\ShinkaiMod.cs" />
+    <Compile Include="Mono\RemotePlayer.cs" />
+    <Compile Include="Overrides\MultiplayerBuilder.cs" />
+    <Compile Include="Patching\ShinkaiPatch.cs" />
+    <Compile Include="Patching\Patches.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unity\CameraChange.cs" />
+    <Compile Include="Unity\CheatChange.cs" />
+    <Compile Include="Unity\GUISkinUtils.cs" />
+    <Compile Include="Unity\Helpers.cs" />
+    <Compile Include="Unity\ParentChange.cs" />
+    <Compile Include="Unity\RateLimiter.cs" />
+    <Compile Include="Unity\SceneDumper.cs" />
+    <Compile Include="Unity\ObjectSerializer.cs" />
+    <Compile Include="Unity\Smoothing.cs" />
+    <Compile Include="Unity\SubRootChange.cs" />
+    <Compile Include="Unity\TransformExtensions.cs" />
+    <Compile Include="Unity\VehicleChange.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Harmony\Harmony.csproj">
+      <Project>{69aee16a-b6e7-4642-8081-3928b32455df}</Project>
+      <Name>Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LiteNetLib\LiteNetLib.csproj">
+      <Project>{b0a014e4-0392-4e35-aa42-8fb5a40417e0}</Project>
+      <Name>LiteNetLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShinkaiModel\ShinkaiModel.csproj">
+      <Project>{b16f4de7-21ad-4fef-955b-0a5a365fa4e3}</Project>
+      <Name>ShinkaiModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
