@@ -2,7 +2,7 @@
 
 ![Subnautica Multiplayer](https://raw.githubusercontent.com/nkga/shinkai/master/doc/img/subnautica_players.jpg)
 
-Shinkai is a co-op multiplayer mod for [Subnautica](https://store.steampowered.com/app/264710/Subnautica/).
+Shinkai was a co-op multiplayer mod for [Subnautica](https://store.steampowered.com/app/264710/Subnautica/) based on the [Nitrox](https://github.com/SubnauticaNitrox/Nitrox) project.
 
 For technical details on the project, there is an accompanying
 [blog post](https://nkga.github.io/post/shinkai-a-subnautica-multiplayer-mod/) for this repository.
